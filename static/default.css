@@ -1,0 +1,767 @@
+	html, body
+	{
+		height: 100%;
+	}
+	
+	body
+	{
+		margin: 0px;
+		padding: 0px;
+		background: #181818;
+		font-family: 'Inria Sans', sans-serif;
+		font-size: 12pt;
+		font-weight: 200;
+		color: #FFF;
+	}
+	
+	
+	h1, h2, h3
+	{
+		margin: 0;
+		padding: 0;
+	}
+	
+	p, ol, ul
+	{
+		margin-top: 0;
+	}
+	
+	ol, ul
+	{
+		padding: 0;
+		list-style: none;
+	}
+	
+	p
+	{
+		line-height: 180%;
+	}
+	
+	strong
+	{
+	}
+	
+	a
+	{
+		color: #ee0000;
+	}
+	
+	a:hover
+	{
+		text-decoration: none;
+		border-radius: 6px;
+		background-color: rgba(255,180,0,0.64);
+	}
+	
+	.container
+	{
+		overflow: hidden;
+		margin: 0em auto;
+		width: 1200px;
+	}
+	.container2:after 
+	{
+		content: "";
+		display: table;
+		clear: both;
+	}
+	.container3
+	{
+		
+		margin: 0em auto;
+		width: 1200px;
+		background-color: rgba(0,0,0,0.6)
+		color:black;
+	}
+	
+/*********************************************************************************/
+/* Image Style                                                                   */
+/*********************************************************************************/
+
+	.image
+	{
+		display: inline-block;
+	}
+	
+	.image img
+	{
+		display: block;
+		width: 100%;
+	}
+	
+	.image-full
+	{
+		display: block;
+		width: 100%;
+		margin: 0 0 2em 0;
+	}
+	
+	.image-left
+	{
+		float: left;
+		margin: 0 2em 2em 0;
+	}
+	
+	.image-centered
+	{
+		display: block;
+		margin: 0 0 2em 0;
+	}
+	
+	.image-centered img
+	{
+		margin: 0 auto;
+		width: auto;
+	}
+
+/*********************************************************************************/
+/* List Styles                                                                   */
+/*********************************************************************************/
+
+	ul.style1
+	{
+	}
+	
+	ul.actions
+	{
+	}
+	
+	ul.actions li
+	{
+		display: inline-block;
+		padding: 0em 0.50em;
+	}
+
+
+/*********************************************************************************/
+/* Social Icon Styles                                                            */
+/*********************************************************************************/
+
+	ul.contact
+	{
+		margin: 0;
+		padding: 2em 0em 0em 0em;
+		list-style: none;
+	}
+	
+	ul.contact li
+	{
+		display: inline-block;
+		padding: 0em 0.30em;
+		font-size: 1em;
+	}
+	
+	ul.contact li span
+	{
+		display: none;
+		margin: 0;
+		padding: 0;
+	}
+	
+	ul.contact li a
+	{
+		color: #FFF;
+	}
+	
+	ul.contact li a:before
+	{
+		display: inline-block;
+		background: #3f3f3f;
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		border-radius: 20px;
+		text-align: center;
+		color: #FFFFFF;
+	}
+	
+	ul.contact li a.icon-twitter:before { background: #2DAAE4; }
+	ul.contact li a.icon-facebook:before { background: #39599F; }
+	ul.contact li a.icon-dribbble:before { background: #C4376B;	}
+	ul.contact li a.icon-tumblr:before { background: #31516A; }
+	ul.contact li a.icon-rss:before { background: #F2600B; }
+
+/*********************************************************************************/
+/* Button Style                                                                  */
+/*********************************************************************************/
+
+	.button
+	{
+		display: inline-block;
+		padding: 1em 2em 1em 2em;
+		letter-spacing: 0.10em;
+		margin-top: 2em;
+		padding: 1.40em 3em;
+		background: #f3cc2f;
+		border-radius: 6px;
+		text-decoration: none;
+		font-weight: 700;
+		font-size: 1em;
+		color: #3f0900;
+	}
+	
+	.button-alt
+	{
+		padding: 1em 2em;
+		border-color: rgba(0,0,0,.8);
+	}
+		
+/*********************************************************************************/
+/* 4-column                                                                      */
+/*********************************************************************************/
+
+	.box1,
+	.box2,
+	.box3,
+	.box4
+	{
+		width: 235px;
+	}
+	
+	.box1,
+	.box2,
+	.box3,
+	{
+		float: left;
+		margin-right: 20px;
+	}
+	
+	.box4
+	{
+		float: right;
+	}
+	
+/*********************************************************************************/
+/* 3-column                                                                      */
+/*********************************************************************************/
+
+	.boxA
+	{
+		width: 20%;
+	}
+	.boxB
+	{
+		width: 38%;
+		text-align: left;
+		padding: 0.6em 0.2em;
+	}
+
+	.boxC
+	{
+		width: 38%;
+		text-align: left;
+		padding: 0.6em 0.2em;
+	}
+
+	.boxA
+	{
+		float: left;
+	}
+
+	.boxB
+	{
+		float: left;
+	}
+	
+	.boxC
+	{
+		float: right;
+	}
+
+
+/*********************************************************************************/
+/* 2-column                                                                      */
+/*********************************************************************************/
+
+	.tbox1,
+	.tbox2
+	{
+		width: 575px;
+	}
+	
+
+	.tbox1
+	{
+		float: left;
+	}
+
+	.tbox2
+	{
+		float: right;
+	}
+
+	
+/*********************************************************************************/
+/* Heading Titles                                                                */
+/*********************************************************************************/
+
+	.title
+	{
+		margin-bottom: 3em;
+	}
+	
+	.title h2
+	{
+		font-size: 2.7em;
+	}
+	
+	.title .byline
+	{
+		font-size: 1.3em;
+		color: rgba(255,255,255,0.60);
+	}
+
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+
+	#wrapper
+	{
+		position: relative;
+		padding: 1em 0em 2em 0em;
+		background: rgba(0,0,0,0.6);
+	}
+
+	#wrapper2
+	{
+		position: relative;
+		padding: 2em 0em 2em 0em;
+		background: rgba(0,0,0,0.4);
+	}
+
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+
+	#header-wrapper
+	{
+		position: relative;
+		padding: 0em 0em 0em 0em;
+		background: #111111 url(images/truck2.jpg) no-repeat center;
+		background-size: cover;
+	}
+
+	#header-wrapper2
+	{
+		position: relative;
+		padding: 0em 0em 1.4em 0em;
+		background: #111111 url(images/teslatruck.jpg) no-repeat center;
+		background-size: cover;
+	}
+
+	#header-wrapper3
+	{
+		position: relative;
+		padding: 0em 0em 0em 0em;
+		background: #111111 url(images/mapbg.jpg) no-repeat center;
+		background-size: cover;
+	}
+
+	#header
+	{
+		position: relative;
+		padding: 0em 0em 7em 6em;
+		background: rgba(0,0,0,0.8);
+	}
+
+	#header2
+	{
+		position: relative;
+		text-align: center;
+		font-size: 1em;
+		border-radius: 6px;
+		padding: 1em 0em 2em 1em;
+		background: rgba(0,0,0,0.4);
+	}
+
+/*********************************************************************************/
+/* Logo                                                                          */
+/*********************************************************************************/
+
+	#logo
+	{
+		position: absolute;
+		top: 1em;
+		left: 2.8em;
+	}
+	
+	#logo h1
+	{
+		font-size: 3.8em;
+		color: #79C255;
+	}
+	
+	#logo a
+	{
+		text-decoration: none;
+		color: rgba(255,255,255,1);
+	}
+
+/*********************************************************************************/
+/* Menu                                                                          */
+/*********************************************************************************/
+
+	#menu
+	{
+		position: absolute;
+		top: 3em;
+		right: 1em;
+	}
+
+	
+	#menu ul
+	{
+		display: inline-block;
+	}
+	
+	#menu li
+	{
+		display: block;
+		float: left;
+		text-align: center;
+	}
+	
+	#menu li a, #menu li span
+	{
+		padding: 1em 1.5em;
+		letter-spacing: 1px;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 1em;
+		color: rgba(255,255,255,1);
+	}
+	
+	#menu li:hover a, #menu li.active a, #menu li.active span
+	{
+	}
+	
+	#menu .active a
+	{
+		background: #f3cc2f;
+		border-radius: 6px;
+		color: rgba(255,255,255,1);
+		color: #3f0900;
+	}
+	
+	#menu .icon
+	{
+	}
+
+/*********************************************************************************/
+/* Banner                                                                        */
+/*********************************************************************************/
+
+	#banner-wrapper
+	{
+		padding: 5em 0em;
+		background: rgba(0,0,0,.8);
+	}
+
+	#banner
+	{
+		text-align: center;
+	}
+	
+	#banner .title h2
+	{
+		font-size: 4em;
+	}
+	
+	#banner .title .byline
+	{
+		font-size: 2em;
+	}
+	
+	#banner .button
+	{
+		margin-top: 2em;
+		padding: 1.40em 3em;
+		border-radius: 6px;
+		font-weight: 700;
+		font-size: 1em;
+		
+	}
+	
+	.banner
+	{
+		margin-bottom: 5em;
+	}
+
+/*********************************************************************************/
+/* Menu2                                                                          */
+/*********************************************************************************/
+
+	#menu2
+	{
+		position: relative;
+		text-align: center;
+		top: 0.4em;
+		left: 0em;
+	}
+
+	
+	#menu2 ul
+	{
+		display: inline-grid;
+	}
+	
+	#menu2 li
+	{
+		display: block;
+		float: left;
+		text-align: center;
+		line-height: 2.2em;
+
+	}
+	
+	#menu2 li a, #menu2 li span
+	{
+		padding: 0.2em 2.5em;
+		letter-spacing: 1px;
+		word-spacing: 2px;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 1em;
+		color: rgba(255,255,255,1);
+	}
+	
+	#menu2 li:hover a, #menu2 li.active a, #menu2 li.active span
+	{
+	}
+	
+	#menu2 .active a
+	{
+		background: #f3cc2f;
+		border-radius: 6px;
+		color: rgba(255,255,255,1);
+		color: #3f0900;
+	}
+	
+	#menu2 .icon
+	{
+	}
+
+/*********************************************************************************/
+/* Menu3                                                                          */
+/*********************************************************************************/
+
+	#menu3
+	{
+		position: relative;
+		text-align: center;
+		top: 0.6em;
+		right: 0em;
+		background-color: rgba(0,0,0,0.54);
+	}
+
+	
+	#menu3 ul
+	{
+		display: inline-grid;
+
+	}
+	
+	#menu3 li
+	{
+		display: block;
+		float: left;
+		text-align: left;
+		line-height: 5.2em;
+	}
+	
+	#menu3 li a, #menu3 li span
+	{
+		padding: 0.2em 1em;
+		letter-spacing: 1px;
+		word-spacing: 2px;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 1em;
+		color: rgba(255,255,255,1);
+	}
+	
+	#menu3 li:hover a, #menu3 li.active a, #menu3 li.active span
+	{
+	}
+	
+	#menu3 .active a
+	{
+		background: #f3cc2f;
+		border-radius: 10px;
+		color: rgba(255,255,255,1);
+		color: #3f0900;
+	}
+	
+	#menu3 .icon
+	{
+	}
+/*********************************************************************************/
+/* dopeform                                                                          */
+/*********************************************************************************/
+
+	#dopeform {
+  		box-sizing: border-box;
+  		background-color: rgba(0,0,0,0.54);
+	}
+
+
+	#dopeform input[type=text], select, textarea {
+		width: 16em;
+		padding: 12px;
+		border: 2px solid #ccc;
+		border-radius: 4px;
+		background-color: rgba(0,0,0,0);
+		resize: vertical;
+	}
+	
+	
+	#dopeform label {
+		padding: 0px 0px 0px 0px;
+		display: inline-grid;
+		border-radius: 4px;
+		color:white;
+	}
+	
+	#dopeform input[type=submit] {
+		background-color: #4CAF50;
+		color: white;
+		padding: 12px 20px;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		float: center;
+	}
+	
+	#dopeform input[type=submit]:hover {
+		background-color: #45a049;
+	}
+
+	#dopeform @media screen and (max-width: 600px) {
+  		.col-25, .col-75, input[type=submit] {
+    		width: 100%;
+    		margin-top: 0;
+		}	
+	}
+
+
+/*********************************************************************************/
+/* Page                                                                          */
+/*********************************************************************************/
+
+	#page
+	{
+	}
+
+/*********************************************************************************/
+/* Content                                                                       */
+/*********************************************************************************/
+
+	#content
+	{
+	}
+
+/*********************************************************************************/
+/* Sidebar                                                                       */
+/*********************************************************************************/
+
+	#sidebar
+	{
+	}
+
+/*********************************************************************************/
+/* Footer                                                                        */
+/*********************************************************************************/
+
+	#footer
+	{
+	}
+
+/*********************************************************************************/
+/* Copyright                                                                     */
+/*********************************************************************************/
+
+	#copyright
+	{
+		overflow: hidden;
+		padding: 5em 0em;
+		border-top: 1px solid rgba(0,0,0,0.08);
+	}
+	
+	#copyright p
+	{
+		text-align: center;
+		font-size: 1em;
+		color: rgba(255,255,255,0.3);
+	}
+	
+	#copyright a
+	{
+		text-decoration: none;
+		color: rgba(255,255,255,0.6);
+	}
+
+
+/*********************************************************************************/
+/* Welcome                                                                       */
+/*********************************************************************************/
+
+	#welcome
+	{
+		position: relative;
+		padding: 7em 0em 7em 0em;
+		background: #f3cc2f;
+		background-size: cover;
+		text-align: center;
+	}
+	
+	#welcome .container
+	{
+		width: 1000px;
+		padding: 0px 100px;
+		color: rgba(255,255,255,0.8);
+	}
+	
+	#welcome a
+	{
+		color: rgba(255,255,255,1);
+	}
+	
+	#welcome .button
+	{
+		background: #FFF;
+		color: #3f0900;
+	}
+
+
+/*********************************************************************************/
+/* Extra                                                                         */
+/*********************************************************************************/
+
+	#three-column
+	{
+		text-align: center;
+		color: rgba(0,0,0,0);
+	}
+
+	#three-column .fa
+	{
+		display: block;
+		padding: 0em 0em;
+		color: rgba(0,0,0,0);
+		font-size: 2em;
+	}
+	
+	#three-column .title h2
+	{
+		font-weight: bold;
+		color: rgba(0,0,0,0.2);
+	}
+
+	#three-column .title .byline
+	{
+		text-align: center;
+		color: rgba(0,0,0,0.2;
+	}
+
+
+
