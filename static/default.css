@@ -57,7 +57,7 @@
 	{
 		overflow: hidden;
 		margin: 0em auto;
-		width: 1200px;
+		width: auto;
 	}
 	.container2:after 
 	{
@@ -352,7 +352,7 @@
 	#header-wrapper3
 	{
 		position: relative;
-		padding: 0em 0em 0em 0em;
+		padding: 0em 0em 1.4em 0em;
 		background: #111111 url(images/mapbg.jpg) no-repeat center;
 		background-size: cover;
 	}
@@ -453,8 +453,8 @@
 
 	#banner-wrapper
 	{
-		padding: 5em 0em;
-		background: rgba(0,0,0,.8);
+		padding: 4em 0em;
+		background: rgba(0,0,0,0.54);
 	}
 
 	#banner
@@ -685,6 +685,9 @@
 		overflow: hidden;
 		padding: 5em 0em;
 		border-top: 1px solid rgba(0,0,0,0.08);
+		left: 0;
+		bottom: 0;
+		width: 100%;
 	}
 	
 	#copyright p
@@ -740,7 +743,7 @@
 	#three-column
 	{
 		text-align: center;
-		color: rgba(0,0,0,0);
+		color: rgba(255,255,255,1);
 	}
 
 	#three-column .fa

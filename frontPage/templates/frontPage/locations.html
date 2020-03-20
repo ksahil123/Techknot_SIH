@@ -1,32 +1,16 @@
-{% load static %}
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title></title>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<link href="https://fonts.googleapis.com/css?family=Inria+Sans&display=swap" rel="stylesheet">
-<link href="{% static 'default.css' %}" rel="stylesheet" type="text/css" media="all" />
-<link href="{% static 'fonts.css' %}" rel="stylesheet" type="text/css" media="all" />
-
-
-</head>
-
-<body>
-
-
+{% extends "frontPage/base.html" %}
+{% block content %}
 <div id="header-wrapper3">
 	<div id="header" class="container">
-	<div id="logo">
-		<h1><a href="#">Tezy</a></h1>
-	</div>
-	<div id="menu">
-		<ul>
-			<li><a href="" accesskey="1" title="">Go Back</a></li>
-			<li><a href="http://127.0.0.1:8000/" accesskey="2" title="" target="_blank">Go To Homepage</a></li>
-		</ul>
-	</div>
+		<div id="logo">
+			<h1><a href="#">Tezy</a></h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li><a href="" accesskey="1" title="">Go Back</a></li>
+				<li><a href="http://127.0.0.1:8000/" accesskey="2" title="" target="_blank">Go To Homepage</a></li>
+			</ul>
+		</div>
 	</div>
 	<div id="wrapper">
 		<div id="three-column" class="container">
@@ -40,23 +24,17 @@
 					</ul>
 				</div>
 			</div>
-			<div class="">
+			<div class="boxB">
 				<div id="dopeform" class="container2">
 					<form method="POST">
 						{% csrf_token %}
-						{{form}}
+						{{form.as_p}}
 						<br><input type="submit" value="OK">
 					</form>
 				</div>
 			</div>
 			
 		</div>
-		
 	</div>
 </div>
-<div id="copyright" class="container">
-	<p>&copy; Untitled. All rights reserved. <a href="http://fotogrph.com/">Pexels</a> | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
-</div>
-
-</body>
-</html>
+{% endblock content %}

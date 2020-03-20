@@ -1,25 +1,10 @@
-{% load static %}
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title></title>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<link href="https://fonts.googleapis.com/css?family=Inria+Sans&display=swap" rel="stylesheet">
-<link href="{% static 'default.css' %}" rel="stylesheet" type="text/css" media="all" />
-<link href="{% static 'fonts.css' %}" rel="stylesheet" type="text/css" media="all" />
-
-
-</head>
-
-<body>
-
-
+{% extends "frontPage/base.html" %}
+{% block content %}
 <div id="header-wrapper">
 	<div id="header" class="container">
-	<div id="logo">
-		<h1><a href="#">Tezy</a></h1>
+		<div id="logo">
+			<h1><a href="#">Tezy</a></h1>
+		</div>
 	</div>
 	<div id="menu">
 		<ul>
@@ -30,23 +15,16 @@
 			<li><a href="" accesskey="5" title="">FAQ</a></li>
 		</ul>
 	</div>
-
-	</div>
 	<div id="banner-wrapper">
-	<div id="banner" class="container">
-		<div class="title">
-			<h2>Get your tariff rate in just a few steps</h2>
-			<span class="byline">Tariff rate predicted just for your cargo</span>
+		<div id="banner" class="container">
+			<div class="title">
+				<h2>Get your tariff rate in just a few steps</h2>
+				<span class="byline">Tariff rate predicted just for your cargo</span>
+			</div>
+			<ul class="actions">
+				<li><a href="/locations" class="button">Get Started</a></li>
+			</ul>
 		</div>
-		<ul class="actions">
-			<li><a href="/locations" class="button">Get Started</a></li>
-		</ul>
-	</div>
 	</div>
 </div>
-<div id="copyright" class="container">
-	<p>&copy; Untitled. All rights reserved. <a href="http://fotogrph.com/">Pexels</a> | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
-</div>
-
-</body>
-</html>
+{% endblock content %}
