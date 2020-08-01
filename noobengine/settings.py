@@ -121,6 +121,8 @@ USE_TZ = True
 STATICFILES_DIRS=[
     os.path.join(BASE_DIR,"static"),
     '/noobengine/static',
+    os.path.join(BASE_DIR,"dataset"),
+    '/noobengine/frontPage/dataset',
 ]
 
 STATIC_URL = '/static/'

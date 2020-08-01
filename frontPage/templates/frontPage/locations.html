@@ -7,7 +7,7 @@
 		</div>
 		<div id="menu">
 			<ul>
-				<li><a href="" accesskey="1" title="">Go Back</a></li>
+				<li><a href="http://127.0.0.1:8000/" accesskey="1" title="">Go Back</a></li>
 				<li><a href="http://127.0.0.1:8000/" accesskey="2" title="" target="_blank">Go To Homepage</a></li>
 			</ul>
 		</div>
@@ -28,7 +28,7 @@
 				<div id="dopeform" class="container2">
 					<form method="POST">
 						{% csrf_token %}
-						{{form.as_p}}
+						{{form1.as_p}}
 						<br><input type="submit" value="OK">
 					</form>
 				</div>

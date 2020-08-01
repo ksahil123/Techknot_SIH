@@ -3,9 +3,11 @@ from django.http import HttpResponseRedirect
 from .forms import *
 import urllib.request
 import json
-import pyqrcode
+#import pyqrcode
 import requests
-from geopy.geocoders import Nominatim
+#from geopy.geocoders import Nominatim
+from .import actualstuff as ast
+import pandas as pd
 #https://www.google.com/maps/dir/?api=1&origin=Space+Needle+Seattle+WA&destination=Pike+Place+Market+Seattle+WA&travelmode=bicycling
 """
 import requests
@@ -23,10 +25,11 @@ response = requests.request("GET", url, headers=headers, params=querystring)
 """
 
 
-
+dataset = pd.DataFrame()
 
 # Create your views here.
 def firstPage(request):
+	#dataset = ast.datasetLoader()
 	return render(request,'frontPage/index.html',{'title':'Tezy-Home'})
 
 def aboutPage(request):
@@ -36,66 +39,16 @@ def setAddressPage(request):
 	if request.method == "POST":
 		completeForm = addressForm(request.POST)
 		if completeForm.is_valid():
-			# get origin and destination from the form
-			origin = completeForm.cleaned_data['origin'].replace(' ','+')
-			destination = completeForm.cleaned_data['destination'].replace(' ','+')
+			# get origin destination date weight from the form
+			#x,y = decoder(completeForm.origin, completeForm.destination)
 
-			try:
-				# calculating coordinates of the origin and destination
-				geolocator = Nominatim(user_agent='tezy')
-				origin_loc = geolocator.geocode(origin)
-				dest_loc = geolocator.geocode(destination)
-				print(origin_loc.latitude,origin_loc.longitude)
-				print(dest_loc.latitude,dest_loc.longitude)
-				org_string = str(origin_loc.latitude)+"%2C"+str(origin_loc.longitude)+"%3B"
-				dest_string = str(dest_loc.latitude)+"%2C"+str(dest_loc.longitude)+"%3B"
-			except:
-				print('Error occurred in fetching latitude and longitude')
-				return render(request,'frontPage/directions.html',{'err':'Error fetching coordinates'},{'title':'Tezy-Navigation'})
+			# getting the slice
+			df = ast.getSlice(dataset, x, y)
+			
 
-			try:
-				# using coordinates to calculate distance and travel time
-				url = "https://trueway-matrix.p.rapidapi.com/CalculateDrivingMatrix"
 
-				querystring = {"destinations":dest_string,"origins":org_string}
+			return render(request,'frontPage/directions.html',{'title':'Tezy-Navigation','d':distance,'t':time})
 
-				headers = {'x-rapidapi-host': "trueway-matrix.p.rapidapi.com",'x-rapidapi-key': "51e28f2319msh1402c97f967f494p14ff9fjsn2453b6f2f065"}
-
-				response = requests.request("GET", url, headers=headers, params=querystring)
-
-				details = json.loads(response.text)
-				print(details)
-				temp_list = details.get('distances')
-				distance = temp_list[0][0]
-				distance = distance/1000
-				distance = round(distance,1)
-				print(distance)
-				temp_list = details.get('durations')
-
-				time = temp_list[0][0]
-				print(time)
-				time = time/3600
-				print(time)
-				time = round(time,1)
-				print(time)
-			except:
-				print('Error occurred in fetching distance and duration.')
-				return render(request,'frontPage/directions.html',{'err':'Error fetching distance and duration'},{'title':'Tezy-Navigation'})
-
-			try:
-				# creating qr link to google maps
-				endpoint = 'https://www.google.com/maps/dir/?api=1&'
-				navigation_request = 'origin={}&destination={}&travelmode=driving'.format(origin,destination)
-				map_req = endpoint+navigation_request
-				dir_link = pyqrcode.create(map_req)
-				dir_link.png("/home/akshatchauhan/noobengine/static/dir.png",scale=5)
-			except:
-				print('Error occurred in creating Google Map Link.')
-				return render(request,'frontPage/directions.html',{'err':'Error creating QR code'},{'title':'Tezy-Navigation'})
-
-			return render(request,'frontPage/directions.html',{'d':distance,'t':time},{'title':'Tezy-Navigation'})
-
-	else:
-		addForm = addressForm()
-	return render(request,'frontPage/locations.html',{'form':addForm},{'title':'Tezy-Set Address'})
+	addForm = addressForm()
+	return render(request,'frontPage/locations.html',{'title':'Tezy-Set Address', 'form1':addForm})
 

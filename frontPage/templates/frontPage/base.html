@@ -1,24 +1,22 @@
 {% load static %}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-{% if title %}
-<title>{{title}}</title>
-{% else %}
-<title>Tezy - Techknot</title>
-{% endif %}
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<link href="https://fonts.googleapis.com/css?family=Inria+Sans&display=swap" rel="stylesheet">
-<link href="{% static 'default.css' %}" rel="stylesheet" type="text/css" media="all" />
-<link href="{% static 'fonts.css' %}" rel="stylesheet" type="text/css" media="all" />
-</head>
-<body>
-{% block content %}{% endblock %}
+	<head>
+		<meta http-equiv="Content-Type" charset="UTF-8" />
+		{% if title %}
+			<title>{{title}}</title>
+		{% else %}
+			<title>Tezy - Techknot</title>
+		{% endif %}
+	<link href="https://fonts.googleapis.com/css?family=Inria+Sans&display=swap" rel="stylesheet">
+	<link href="{% static 'default.css' %}" rel="stylesheet" type="text/css" media="all" />
+	<link href="{% static 'fonts.css' %}" rel="stylesheet" type="text/css" media="all" />
+	</head>
+	<body>
+		{% block content %}{% endblock %}
 
-<div id="copyright" class="container">
-	<p>&copy; Untitled. All rights reserved. <a href="http://fotogrph.com/">Pexels</a> | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
-</div>
-</body>
+		<div id="copyright" class="container">
+		<p>&copy; Untitled. All rights reserved. <a href="http://fotogrph.com/">Pexels</a> | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
+		</div>
+	</body>
 </html>
