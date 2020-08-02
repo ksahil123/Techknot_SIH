@@ -1,0 +1,44 @@
+{% extends "frontPage/base.html" %}
+{% block content %}
+<div id="header-wrapper3">
+	<div id="header" class="container">
+		<div id="logo">
+			<h1><a href="#">Tezy</a></h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li><a href="" accesskey="1" title="">Go Back</a></li>
+				<li><a href="http://127.0.0.1:8000/" accesskey="2" title="" target="_blank">Go To Homepage</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="wrapper">
+		<div id="three-column" class="container">
+			<div class="boxA">
+				<div id="menu3">
+					<ul>
+						<!--<li><a href="" accesskey="1" title="">Cargo Details</a></li>-->
+						<li  class="active"><a href="" accesskey="2" title="" target="_blank">Locations</a></li>
+						<!--<li><a href="" accesskey="3" title="">Payment Options</a></li>-->
+						<li><a href="" accesskey="4" title="">Generate Bill</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="boxB">
+				<div id="dopeform" class="container2">
+					<form method="POST">
+						{% csrf_token %}
+						{{form.as_p}}
+						<!--Sourse: <input type="text" name="source" placeholder="Source">
+						Destination: <input type="text" name="destination" placeholder="Destination">
+						<br>Date of Pickup: <input type="date" name="datePick" placeholder="Date of Pickup">
+						<br>Weight of Cargo:<input type="number" name="weight" placeholder="in tonnes">-->
+						<br><input type="submit" value="Get Bill">
+					</form>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+{% endblock content %}

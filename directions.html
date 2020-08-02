@@ -1,0 +1,45 @@
+{% extends "frontPage/base.html" %}
+{% block content %}
+{% load static %}
+<div id="header-wrapper3">
+	<div id="header" class="container">
+		<div id="logo">
+			<h1><a href="#">Tezy</a></h1>
+		</div>
+	</div>
+	<div id="menu">
+		<ul>
+			<li><a href="" accesskey="1" title="">Go Back</a></li>
+			<li><a href="http://127.0.0.1:8000/" accesskey="2" title="" target="_blank">Go To Homepage</a></li>
+		</ul>
+	</div>
+	<div id="wrapper2">
+		<div id="three-column" class="container">
+			<div class="boxA">
+				<div id="menu3">
+					<ul>
+						<li><a href="" accesskey="1" title="">Cargo Details</a></li>
+						<li  class="active"><a href="" accesskey="2" title="" target="_blank">Locations</a></li>
+						<li><a href="" accesskey="3" title="">Payment Options</a></li>
+						<li><a href="" accesskey="4" title="">Generate Bill</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="boxB">
+					<ul>
+						{% if err %}
+						<li>{{err}}</li>
+						{% else %}
+						<li>Distance: {{d}} km</li>
+						<li>Time: {{t}} hrs </li>
+						<img src="{% static 'dir.png' %}">
+						{% endif %}
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+		
+	</div>
+</div>
+{% endblock %}
